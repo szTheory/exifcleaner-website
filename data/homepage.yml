@@ -1,0 +1,129 @@
+############################# banner ############################
+banner:
+  enable : true
+  title : "Privacy & performance"
+  content : "Attackers are using GPS and device metadata to profile their victims. It also increases file size. Sweep it away, with ExifCleaner."
+  image : "images/icon.png"
+  button:
+    link : "#"
+    label : "Download for free"
+
+############################# Feature ############################
+features:
+  enable : true
+  title : "Our Core Features"
+  image : "images/watch-2.png"
+
+  # feature at the left of the image
+  leftSide:
+    # feature item loop
+  - icon : "tf-ion-ios-alarm-outline"
+    title : "Smooth Touch"
+    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
+    
+    # feature item loop
+  - icon : "tf-ion-ios-bell-outline"
+    title : "Elegant Design"
+    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
+    
+    # feature item loop
+  - icon : "tf-ion-ios-cart-outline"
+    title : "Easy Pricing"
+    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
+
+
+  # feature at the right of the image
+  rightSide:
+    # feature item loop
+  - icon : "tf-ion-ios-alarm-outline"
+    title : "Smooth Touch"
+    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
+
+    # feature item loop
+  - icon : "tf-ion-ios-bell-outline"
+    title : "Elegant Design"
+    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
+
+    # feature item loop
+  - icon : "tf-ion-ios-cart-outline"
+    title : "Easy Pricing"
+    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
+
+
+############################# promo ############################
+promo:
+  enable : true
+  image : "images/watch.png"
+  title : "Designed by professional , the benefit for creative gigs"
+  content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia vel labore, deleniti minima
+            nisi, velit atque quaerat impedit ea maxime sunt accusamus at obcaecati dolor iure iusto omnis quis eum.
+            <br><br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis commodi odit, illo, qui aliquam dol"
+
+
+############################# About Product #######################
+aboutProduct:
+  enable : true
+  title : "Why Choose Apple Watch"
+  items:
+    # about product item loop
+    - image : "images/showcase/showcase-4.png"
+      title : "Lorem ipsum dolor sit amet."
+      content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, sed, assumenda. Tenetur
+            sed esse, voluptas voluptate est veniam numquam, quis magni. Architecto minus suscipit
+            quas, quo harum deserunt consequatur cumque!"
+      button:
+        enable : true
+        label : "Check Features"
+        link : "#"
+        
+    # about product item loop
+    - image : "images/showcase/showcase-3.png"
+      title : "Lorem ipsum dolor sit amet."
+      content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, sed, assumenda. Tenetur
+            sed esse, voluptas voluptate est veniam numquam, quis magni. Architecto minus suscipit
+            quas, quo harum deserunt consequatur cumque!"
+      button:
+        enable : true
+        label : "Check Features"
+        link : "#"
+
+
+#################################### Gallery ########################
+gallery:
+  enable : false
+  title : "Checkout some amazing Shorts"
+  # Set the image directory to use as base
+  directory : "images/showcase"
+  # Set the images to show in the gallery
+  images : ["showcase-1.png", "showcase-2.png", "showcase-3.png", "showcase-4.png", "showcase-5.png", "showcase-6.png", "showcase-7.png", "showcase-8.png"]
+
+
+
+################################## call to action ###################
+cta:
+  enable : false
+  bgImage : "images/call-to-action.jpg"
+  title : "Get Product Updates"
+  content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod"
+  placeholder : "Your Email Address Here"
+
+
+############################## Testimonial ##########################
+testimonial:
+  enable : true
+  title : "User feedback"
+  testimonialItem:
+    # testimonial item loop
+    - name : "Napolean Maximus"
+      designation : "President, World"
+      image : "images/avater.png"
+      content : "I used to have exif data all up in my images. Thanks to ExifCleaner, that is no longer the case!"
+
+
+  ################# button ###############
+  button:
+    enable : true
+    label : "Download now"
+    link : "https://github.com/szTheory/exifcleaner/releases"
+      
