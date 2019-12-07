@@ -1,8 +1,8 @@
 ############################# banner ############################
 banner:
   enable : true
-  title : "Privacy & performance"
-  content : "Attackers use GPS and device metadata to profile their victims. Metadata also increases file size. Sweep it away, with ExifCleaner."
+  title : "Privacy and Performance"
+  content : "Attackers use GPS and device metadata to profile their victims. It also increases image file size. Sweep it away, with ExifCleaner."
   image : "images/icon.png"
   button:
     link : "#"
@@ -20,10 +20,6 @@ features:
     title : "Fast"
     content : "Built on top of the proven [ExifTool](https://exiftool.org/) library."
     
-  - icon : "tf-ion-android-hand"
-    title : "Drag & Drop"
-    content : "The easiest workflow for daily use."
-    
   - icon : "tf-ion-code-working"
     title : "Free and open source"
     content : "MIT licensed so you can modify it to your liking."
@@ -31,6 +27,10 @@ features:
   - icon : "tf-desktop"
     title : "Cross-platform support"
     content : "Windows, Mac, Linux versions available."
+
+  - icon : "tf-ion-android-hand"
+    title : "Drag & Drop"
+    content : "The easiest workflow for daily use."
 
   # feature at the right of the image
   rightSide:
@@ -71,7 +71,7 @@ aboutProduct:
             sed esse, voluptas voluptate est veniam numquam, quis magni. Architecto minus suscipit
             quas, quo harum deserunt consequatur cumque!"
       button:
-        enable : true
+        enable : false
         label : "Check Features"
         link : "#"
         
@@ -82,7 +82,7 @@ aboutProduct:
             sed esse, voluptas voluptate est veniam numquam, quis magni. Architecto minus suscipit
             quas, quo harum deserunt consequatur cumque!"
       button:
-        enable : true
+        enable : false
         label : "Check Features"
         link : "#"
 
