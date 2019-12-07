@@ -1,0 +1,29 @@
+.heading {
+  text-align: center;
+  color: #777777;
+  padding-bottom: 70px;
+}
+
+.heading h2 {
+  color: #3c3c3c;
+  padding-bottom: 15px;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.heading p {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 300;
+}
+
+.subheading {
+  color: #3c3c3c;
+  padding-bottom: 15px;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 45px;
+}

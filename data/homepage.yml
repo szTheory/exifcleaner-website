@@ -2,7 +2,7 @@
 banner:
   enable : true
   title : "Privacy & performance"
-  content : "Attackers are using GPS and device metadata to profile their victims. It also increases file size. Sweep it away, with ExifCleaner."
+  content : "Attackers are using GPS and device metadata to profile their victims. Metadata also increases file size. Sweep it away, with ExifCleaner."
   image : "images/icon.png"
   button:
     link : "#"

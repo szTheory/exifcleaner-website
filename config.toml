@@ -1,7 +1,8 @@
-baseURL = "https://exifcleaner.app/"
+baseURL = "https://exifcleaner.com/"
 languageCode = "en-us"
 title = "ExifCleaner"
 theme = "vex-hugo"
+assetDir = "assets"
 
 #################################### Plugins ##########################################
 [params.plugins]
@@ -36,12 +37,12 @@ theme = "vex-hugo"
     
   [[menu.main]]
   name = "Features"
-  URL = "features"
+  URL = "#features"
   weight = 2
   
   [[menu.main]]
   name = "Download"
-  URL = "download"
+  URL = "https://github.com/szTheory/exifcleaner/releases"
   weight = 3
   
   [[menu.main]]
@@ -49,19 +50,17 @@ theme = "vex-hugo"
   URL = "https://github.com/szTheory/exifcleaner"
   weight = 4
 
-
 ########################### Default parameters ##########################
 [params]
 logo = ""
 home = "Home"
 # Meta data
-description = "This is meta description"
+description = "Desktop app to clean image metadata"
 author = "szTheory"
-# Google Analitycs
-googleAnalitycsID = "Your ID"
 # copyright
 copyright = "Copyright 2019 &copy; [szTheory](http://github.com/szTheory) | All right reserved."
+pageTitle = "ExifCleaner - Desktop app to clean image metadata"
 
   # Preloader
   [params.preloader]
-  enable = true
+  enable = false

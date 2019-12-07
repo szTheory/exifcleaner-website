@@ -1,0 +1,24 @@
+<head>
+  <meta charset="utf-8">
+  <title>{{ .Site.Params.pageTitle }}</title>
+
+  {{ "<!-- mobile responsive meta -->" | safeHTML }}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description"
+    content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+  {{ with .Site.Params.author }}
+  <meta name="author" content="{{ . }}">{{ end }}
+  {{ hugo.Generator }}
+
+  {{ $options := (dict "outputStyle" "compressed" "includePaths" (slice "node_modules")) }}
+  {{ $styles := resources.Get "css/index.scss" | resources.ToCSS $options | fingerprint }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
+
+  {{ $script := resources.Get "js/index.js" | minify | fingerprint }}
+  <script src="{{ $script.RelPermalink }}" async defer></script>
+
+  <link rel="shortcut icon" href="{{ "images/favicon.png" | absURL }}" type="image/x-icon">
+  <link rel="icon" href="{{ "images/favicon.png" | absURL }}" type="image/x-icon">
+
+</head>

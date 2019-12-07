@@ -1,0 +1,22 @@
+.input-group {
+  margin-top: 30px;
+  position: relative;
+}
+
+.input-group .btn-submit {
+  padding: 10.5px 40px !important;
+  position: absolute;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  top: 0;
+  right: 0;
+}
+
+.input-group input {
+  height: 50px;
+  border-radius: 40px;
+  border: none;
+  padding-left: 15px;
+  box-shadow: none;
+  display: table-cell;
+}

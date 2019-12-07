@@ -1,0 +1,17 @@
+a {
+  transition: all 0.2s ease-in-out 0s;
+}
+
+a:focus,
+.btn:focus,
+.btn:active:focus {
+  box-shadow: none;
+  outline: 0 none;
+}
+
+a,
+a:active,
+a:focus,
+a:active {
+  text-decoration: none;
+}
