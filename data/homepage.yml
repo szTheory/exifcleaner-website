@@ -56,31 +56,20 @@ promo:
   enable : true
   image : "images/darkmode.png"
   title : "Dark Mode"
-  content : "Automatically detects dark mode from the operating system."
+  icon : "tf-ion-ios-moon"
+  content : "Automatically detects your operating system's dark mode setting to reduce eye strain. It will change back to day mode when your computer does."
 
 
 ############################# About Product #######################
 aboutProduct:
   enable : true
-  title : "Why Choose Apple Watch"
+  title : ""
   items:
     # about product item loop
-    - image : "images/showcase/showcase-4.png"
-      title : "Lorem ipsum dolor sit amet."
-      content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, sed, assumenda. Tenetur
-            sed esse, voluptas voluptate est veniam numquam, quis magni. Architecto minus suscipit
-            quas, quo harum deserunt consequatur cumque!"
-      button:
-        enable : false
-        label : "Check Features"
-        link : "#"
-        
-    # about product item loop
-    - image : "images/showcase/showcase-3.png"
-      title : "Lorem ipsum dolor sit amet."
-      content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, sed, assumenda. Tenetur
-            sed esse, voluptas voluptate est veniam numquam, quis magni. Architecto minus suscipit
-            quas, quo harum deserunt consequatur cumque!"
+    - image : "images/batchprocessing.png"
+      title : "Multi-Core Batch Processing"
+      icon : "tf-ion-coffee"
+      content : "Exif read/write operations are asyncronously spawned to separate processes that automatically distribute across all available CPU cores."
       button:
         enable : false
         label : "Check Features"
