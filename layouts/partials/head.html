@@ -11,7 +11,7 @@
   <meta name="author" content="{{ . }}">{{ end }}
   {{ hugo.Generator }}
 
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Noto+Serif&display=swap" rel="stylesheet">
 
   {{ $options := (dict "outputStyle" "compressed" "includePaths" (slice "node_modules")) }}
   {{ $styles := resources.Get "css/index.scss" | resources.ToCSS $options | fingerprint }}
