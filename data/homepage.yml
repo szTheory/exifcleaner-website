@@ -6,59 +6,57 @@ banner:
   image : "images/icon.png"
   button:
     link : "#"
-    label : "Download for free"
+    label : "Download for FREE"
 
 ############################# Feature ############################
 features:
   enable : true
   title : "Core Features"
-  image : "images/watch-2.png"
+  image : "images/screenshot.png"
 
   # feature at the left of the image
   leftSide:
-    # feature item loop
-  - icon : "tf-ion-ios-alarm-outline"
-    title : "Smooth Touch"
-    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
+  - icon : " tf-ion-ios-speedometer"
+    title : "Fast"
+    content : "Built on top of the proven [ExifTool](https://exiftool.org/) library."
     
-    # feature item loop
-  - icon : "tf-ion-ios-bell-outline"
-    title : "Elegant Design"
-    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
+  - icon : "tf-ion-android-hand"
+    title : "Drag & Drop"
+    content : "The easiest workflow for daily use."
     
-    # feature item loop
-  - icon : "tf-ion-ios-cart-outline"
-    title : "Easy Pricing"
-    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
+  - icon : "tf-ion-code-working"
+    title : "Free and open source"
+    content : "MIT licensed so you can modify it to your liking."
 
+  - icon : "tf-desktop"
+    title : "Cross-platform support"
+    content : "Windows, Mac, Linux versions available."
 
   # feature at the right of the image
   rightSide:
-    # feature item loop
-  - icon : "tf-ion-ios-alarm-outline"
-    title : "Smooth Touch"
-    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
+  - icon : "tf-ion-images"
+    title : "PNG, JPG, and TIFF"
+    content : "Supports the most popular image formats."
 
-    # feature item loop
-  - icon : "tf-ion-ios-bell-outline"
-    title : "Elegant Design"
-    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
+  - icon : "tf-ion-coffee"
+    title : "Batch-processing"
+    content : "Process tens, hundreds, or even thousands of images at once."
 
-    # feature item loop
-  - icon : "tf-ion-ios-cart-outline"
-    title : "Easy Pricing"
-    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
+  - icon : "tf-ion-arrow-shrink"
+    title : "Multi-core support"
+    content : "Take advantage of all available CPU cores during bath processing."
+
+  - icon : "tf-download2"
+    title : "Automatic updates"
+    content : "Never miss a bugfix or security update."
 
 
 ############################# promo ############################
 promo:
   enable : true
-  image : "images/watch.png"
-  title : "Designed by professional , the benefit for creative gigs"
-  content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia vel labore, deleniti minima
-            nisi, velit atque quaerat impedit ea maxime sunt accusamus at obcaecati dolor iure iusto omnis quis eum.
-            <br><br>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis commodi odit, illo, qui aliquam dol"
+  image : "images/darkmode.png"
+  title : "Dark Mode"
+  content : "Automatically detects dark mode from the operating system."
 
 
 ############################# About Product #######################
@@ -124,6 +122,6 @@ testimonial:
   ################# button ###############
   button:
     enable : true
-    label : "Download now"
+    label : "Download for FREE"
     link : "https://github.com/szTheory/exifcleaner/releases"
       

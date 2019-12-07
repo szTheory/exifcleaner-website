@@ -1,3 +1,6 @@
 .feature-list .btn-main {
   margin-top: 15px;
 }
+#feature img {
+  box-shadow: 4px 4px 8px;
+}
