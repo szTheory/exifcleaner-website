@@ -2,6 +2,7 @@ baseURL = "https://exifcleaner.com/"
 languageCode = "en-us"
 title = "ExifCleaner"
 theme = "vex-hugo"
+assetDir = "/assets"
 
 ###### node_modules JS assets #######
 [module]
