@@ -5,7 +5,7 @@ banner:
   content : "Attackers use GPS and device metadata to profile their victims. It also increases image file size. Sweep it away, with ExifCleaner."
   image : "images/icon.png"
   button:
-    link : "#"
+    link : "https://github.com/szTheory/exifcleaner/releases"
     label : "Download for FREE"
 
 ############################# Feature ############################
@@ -28,10 +28,6 @@ features:
     title : "Cross-platform support"
     content : "Windows, Mac, Linux versions available."
 
-  - icon : "tf-ion-android-hand"
-    title : "Drag & Drop"
-    content : "The easiest workflow for daily use."
-
   # feature at the right of the image
   rightSide:
   - icon : "tf-ion-images"
@@ -41,10 +37,6 @@ features:
   - icon : "tf-ion-coffee"
     title : "Batch-processing"
     content : "Process tens, hundreds, or even thousands of images at once."
-
-  - icon : "tf-ion-arrow-shrink"
-    title : "Multi-core support"
-    content : "Take advantage of all available CPU cores during bath processing."
 
   - icon : "tf-download2"
     title : "Automatic updates"
@@ -65,35 +57,23 @@ aboutProduct:
   enable : true
   title : ""
   items:
-    # about product item loop
     - image : "images/batchprocessing.png"
       title : "Multi-Core Batch Processing"
       icon : "tf-ion-coffee"
-      content : "Exif read/write operations are asyncronously spawned to separate processes that automatically distribute across all available CPU cores."
+      content : "Exif read/write operations are asyncronously spawned to separate processes that automatically distribute across available CPU cores."
       button:
         enable : false
         label : "Check Features"
         link : "#"
 
-
-#################################### Gallery ########################
-gallery:
-  enable : false
-  title : "Checkout some amazing Shorts"
-  # Set the image directory to use as base
-  directory : "images/showcase"
-  # Set the images to show in the gallery
-  images : ["showcase-1.png", "showcase-2.png", "showcase-3.png", "showcase-4.png", "showcase-5.png", "showcase-6.png", "showcase-7.png", "showcase-8.png"]
-
-
-
-################################## call to action ###################
-cta:
-  enable : false
-  bgImage : "images/call-to-action.jpg"
-  title : "Get Product Updates"
-  content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod"
-  placeholder : "Your Email Address Here"
+    - image : "images/screenshot.png"
+      title : "Drag and Drop"
+      icon : "tf-ion-android-hand"
+      content : "Drag and Drop any image onto the window to begin processing. That's it!"
+      button:
+        enable : false
+        label : "Check Features"
+        link : "#"
 
 
 ############################## Testimonial ##########################
