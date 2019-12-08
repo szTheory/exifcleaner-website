@@ -69,7 +69,7 @@ aboutProduct:
     - image : "images/screenshot.png"
       title : "Drag and Drop"
       icon : "tf-ion-android-hand"
-      content : "Drag and Drop any image onto the window to begin processing. That's it!"
+      content : "Drag any image onto the window to begin processing. That's it!"
       button:
         enable : false
         label : "Check Features"
