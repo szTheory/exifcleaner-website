@@ -11,9 +11,6 @@
 
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="navbar-nav ml-auto text-center text-lg-left">
-          <li class="nav-item">
-            <a class="nav-link" href="{{ .Site.BaseURL }}">{{ .Site.Params.home }}</a>
-          </li>
           {{ range .Site.Menus.main }}
           <li class="nav-item">
             <a class="nav-link page-scroll" href="{{ .URL | urls.Parse }}">{{ .Name }}</a>
