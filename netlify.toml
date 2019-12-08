@@ -1,0 +1,6 @@
+[build.environment] # global variables
+  HUGO_VERSION = "0.60.1"
+
+[context.production.environment]
+  HUGO_ENV = "production"
+  HUGO_ENABLEGITINFO = "true"
