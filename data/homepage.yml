@@ -1,96 +1,91 @@
 ############################# banner ############################
 banner:
-  enable : true
-  title : "Privacy and Performance"
-  content : "Attackers use GPS and device metadata to profile their victims. It also increases image file size. Sweep it away, with ExifCleaner."
-  image : "images/icon.png"
+  enable: true
+  title: "Privacy and Performance"
+  content: "Attackers use GPS and device metadata to profile their victims. It also increases image file size. Sweep it away, with ExifCleaner."
+  image: "images/icon.png"
   button:
-    link : "https://github.com/szTheory/exifcleaner/releases"
-    label : "Download for FREE"
+    link: "https://github.com/szTheory/exifcleaner/releases"
+    label: "Download for FREE"
 
 ############################# Feature ############################
 features:
-  enable : true
-  title : "Core Features"
-  image : "images/screenshot.png"
+  enable: true
+  title: "Core Features"
+  image: "images/demo.gif"
 
   # feature at the left of the image
   leftSide:
-  - icon : " tf-ion-ios-speedometer"
-    title : "Fast"
-    content : "Built on top of the proven [ExifTool](https://exiftool.org/) library."
-    
-  - icon : "tf-ion-code-working"
-    title : "Free and open source"
-    content : "MIT licensed so you can modify it to your liking."
+    - icon: " tf-ion-ios-speedometer"
+      title: "Fast"
+      content: "Built on top of the proven [ExifTool](https://exiftool.org/) library."
 
-  - icon : "tf-desktop"
-    title : "Cross-platform support"
-    content : "Windows, Mac, Linux versions available."
+    - icon: "tf-ion-code-working"
+      title: "Free and open source"
+      content: "MIT licensed so you can modify it to your liking."
+
+    - icon: "tf-desktop"
+      title: "Cross-platform support"
+      content: "Windows, Mac, Linux versions available."
 
   # feature at the right of the image
   rightSide:
-  - icon : "tf-ion-images"
-    title : "PNG, JPG, and TIFF"
-    content : "Supports the most popular image formats."
+    - icon: "tf-ion-images"
+      title: "PNG, JPG, and TIFF"
+      content: "Supports the most popular image formats."
 
-  - icon : "tf-ion-coffee"
-    title : "Batch-processing"
-    content : "Process tens, hundreds, or even thousands of images at once."
+    - icon: "tf-ion-coffee"
+      title: "Batch-processing"
+      content: "Process tens, hundreds, or even thousands of images at once."
 
-  - icon : "tf-download2"
-    title : "Automatic updates"
-    content : "Never miss a bugfix or security update."
-
+    - icon: "tf-download2"
+      title: "Automatic updates"
+      content: "Never miss a bugfix or security update."
 
 ############################# promo ############################
 promo:
-  enable : true
-  image : "images/darkmode.png"
-  title : "Dark Mode"
-  icon : "tf-ion-ios-moon"
-  content : "Automatically detects your operating system's dark mode setting to reduce eye strain. It will change back to day mode when your computer does."
-
+  enable: true
+  image: "images/darkmode.png"
+  title: "Dark Mode"
+  icon: "tf-ion-ios-moon"
+  content: "Automatically detects your operating system's dark mode setting to reduce eye strain. It will change back to day mode when your computer does."
 
 ############################# About Product #######################
 aboutProduct:
-  enable : true
-  title : ""
+  enable: true
+  title: ""
   items:
-    - image : "images/batchprocessing.png"
-      title : "Multi-Core Batch Processing"
-      icon : "tf-ion-coffee"
-      content : "Exif read/write operations are asyncronously spawned to separate processes that automatically distribute across available CPU cores."
+    - image: "images/batchprocessing.png"
+      title: "Multi-Core Batch Processing"
+      icon: "tf-ion-coffee"
+      content: "Exif read/write operations are asyncronously spawned to separate processes that automatically distribute across available CPU cores."
       button:
-        enable : false
-        label : "Check Features"
-        link : "#"
+        enable: false
+        label: "Check Features"
+        link: "#"
 
-    - image : "images/screenshot.png"
-      title : "Drag and Drop"
-      icon : "tf-ion-android-hand"
-      content : "Drag any image onto the window to begin processing. That's it!"
+    - image: "images/screenshot.png"
+      title: "Drag and Drop"
+      icon: "tf-ion-android-hand"
+      content: "Drag any image onto the window to begin processing. That's it!"
       button:
-        enable : false
-        label : "Check Features"
-        link : "#"
-
+        enable: false
+        label: "Check Features"
+        link: "#"
 
 ############################## Testimonial ##########################
 testimonial:
-  enable : true
-  title : "User feedback"
+  enable: true
+  title: "User feedback"
   testimonialItem:
     # testimonial item loop
-    - name : "Napolean Maximus"
-      designation : "President, World"
-      image : "images/avater.png"
-      content : "I used to have exif data all up in my images. Thanks to ExifCleaner, that is no longer the case!"
-
+    - name: "Napolean Maximus"
+      designation: "President, World"
+      image: "images/avater.png"
+      content: "I used to have exif data all up in my images. Thanks to ExifCleaner, that is no longer the case!"
 
   ################# button ###############
   button:
-    enable : true
-    label : "Download for FREE"
-    link : "https://github.com/szTheory/exifcleaner/releases"
-      
+    enable: true
+    label: "Download for FREE"
+    link: "https://github.com/szTheory/exifcleaner/releases"
