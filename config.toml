@@ -34,11 +34,11 @@ assetDir = "/assets"
 logo = ""
 home = "Home"
 # Meta data
-description = "Desktop app to clean image metadata"
+description = "FREE Desktop app to clean image metadata"
 author = "szTheory"
 # copyright
 copyright = "Copyright 2019 &copy; [szTheory](http://github.com/szTheory) | All right reserved."
-pageTitle = "ExifCleaner - Desktop app to clean image metadata"
+pageTitle = "ExifCleaner - FREE Desktop app to clean image metadata"
 
   # Preloader
   [params.preloader]
