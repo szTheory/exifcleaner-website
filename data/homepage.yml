@@ -38,9 +38,11 @@ features:
       title: "Batch-processing"
       content: "Process tens, hundreds, or even thousands of images at once."
 
-    - icon: "tf-download2"
-      title: "Automatic updates"
-      content: "Never miss a bugfix or security update."
+    - icon: "tf-ion-android-hand"
+      title: "Drag and drop"
+      content: "Easy to use in your daily workflow."
+
+      
 
 ############################# promo ############################
 promo:
