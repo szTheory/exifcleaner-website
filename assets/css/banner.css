@@ -1,0 +1,7 @@
+/* Medium devices (tablets, 768px and up) */
+/* see: https://getbootstrap.com/docs/4.1/layout/overview/#responsive-breakpoints */
+@media (max-width: 768px) {
+  #banner .icon-large {
+    max-width: 50%;
+  }
+}
