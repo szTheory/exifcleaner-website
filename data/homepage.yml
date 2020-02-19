@@ -83,7 +83,7 @@ testimonial:
     # testimonial item loop
     - name: "Napolean Maximus"
       designation: "President, World"
-      image: "images/avater.png"
+      image: "images/avatar.jpg"
       content: "I used to have exif data all up in my images. Thanks to ExifCleaner, that is no longer the case!"
 
   ################# button ###############
