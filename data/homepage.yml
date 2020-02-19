@@ -16,7 +16,7 @@ features:
 
   # feature at the left of the image
   leftSide:
-    - icon: " tf-ion-ios-speedometer"
+    - icon: "tf-ion-ios-speedometer"
       title: "Fast"
       content: "Built on top of the proven [ExifTool](https://exiftool.org/) library."
 
@@ -24,7 +24,7 @@ features:
       title: "Free and open source"
       content: "MIT licensed so you can modify it to your liking."
 
-    - icon: "tf-desktop"
+    - icon: "tf-ion-ios-monitor"
       title: "Cross-platform support"
       content: "Windows, Mac, Linux versions available."
 
@@ -38,9 +38,9 @@ features:
       title: "Batch-processing"
       content: "Process tens, hundreds, or even thousands of images at once."
 
-    - icon: "tf-ion-android-hand"
-      title: "Drag and drop"
-      content: "Easy to use in your daily workflow."
+    - icon: "tf-ion-ios-film"
+      title: "Video files support"
+      content: "Also removes metadata from video files such as MP4."
 
       
 

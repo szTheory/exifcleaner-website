@@ -2,7 +2,7 @@
 
 # exifcleaner-website
 
->Official website for [ExifCleaner, a desktop app for cleaning image metadata.](https://exifcleaner.com)
+>Official website for [ExifCleaner, a desktop app for removing image metadata.](https://exifcleaner.com)
 
 
 ## Development
