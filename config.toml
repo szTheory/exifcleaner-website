@@ -37,7 +37,7 @@ home = "Home"
 description = "FREE Desktop app to clean image metadata"
 author = "szTheory"
 # copyright
-copyright = "Copyright 2019 &copy; [szTheory](http://github.com/szTheory) | All right reserved."
+copyright = "Copyright 2020 &copy; [szTheory](http://github.com/szTheory) | All right reserved."
 pageTitle = "ExifCleaner - FREE Desktop app to clean image metadata"
 
   # Preloader
