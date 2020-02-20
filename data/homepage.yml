@@ -28,21 +28,27 @@ features:
       title: "Cross-platform support"
       content: "Windows, Mac, Linux versions available."
 
+    - icon: "tf-ion-android-hand"
+      title: "Drag and Drop"
+      content: "Quick and simple workflow for daily use."
+
   # feature at the right of the image
   rightSide:
     - icon: "tf-ion-images"
-      title: "PNG, JPG, and TIFF"
+      title: "PNG, JPG, GIF, and TIFF"
       content: "Supports the most popular image formats."
+
+    - icon: "tf-ion-ios-film"
+      title: "M4A, MOV, QT, and MP4"
+      content: "Removes metadata from video files."
+      
+    - icon: "tf-ion-android-document"
+      title: "PDF support"
+      content: "Also removes metadata from PDF documents."
 
     - icon: "tf-ion-coffee"
       title: "Batch-processing"
-      content: "Process tens, hundreds, or even thousands of images at once."
-
-    - icon: "tf-ion-ios-film"
-      title: "Video files support"
-      content: "Also removes metadata from video files such as MP4."
-
-      
+      content: "Process tens, hundreds, or even thousands of files at once."
 
 ############################# promo ############################
 promo:
