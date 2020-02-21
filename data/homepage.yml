@@ -25,11 +25,11 @@ features:
       content: "MIT licensed so you can modify it to your liking."
 
     - icon: "tf-ion-ios-monitor"
-      title: "Cross-platform support"
+      title: "Cross-platform application"
       content: "Windows, Mac, Linux versions available."
 
     - icon: "tf-ion-android-hand"
-      title: "Drag and Drop"
+      title: "Drag and Drop GUI"
       content: "Quick and simple workflow for daily use."
 
   # feature at the right of the image
@@ -75,7 +75,7 @@ aboutProduct:
     - image: "images/screenshot.png"
       title: "Drag and Drop"
       icon: "tf-ion-android-hand"
-      content: "Drag any image onto the window to begin processing and remove exif metadata. That's it!"
+      content: "Drag any image onto the app window to begin processing and remove exif metadata. That's it!"
       button:
         enable: false
         label: "Check Features"
