@@ -75,7 +75,7 @@ aboutProduct:
     - image: "images/screenshot.png"
       title: "Drag and Drop"
       icon: "tf-ion-android-hand"
-      content: "Drag any image onto the app window to begin processing and remove exif metadata. That's it!"
+      content: "Drag any image onto the app window to begin processing and strip exif metadata. That's it!"
       button:
         enable: false
         label: "Check Features"
