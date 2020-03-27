@@ -3,7 +3,7 @@ banner:
   enable: true
   title: "Privacy and Performance"
   content: "Attackers use GPS and device metadata to profile their victims. It also increases image file size. Sweep it away, with ExifCleaner."
-  image: "images/icon.png"
+  image: "images/icon.svg"
   button:
     link: "https://github.com/szTheory/exifcleaner/releases"
     label: "Download for FREE"
