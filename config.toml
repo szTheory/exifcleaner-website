@@ -23,11 +23,17 @@ assetDir = "/assets"
   name = "Download"
   URL = "https://github.com/szTheory/exifcleaner/releases"
   weight = 2
+
+  [[menu.main]]
+  name = "Readme"
+  URL = "https://github.com/szTheory/exifcleaner#readme"
+  weight = 3
   
   [[menu.main]]
   name = "Source Code"
   URL = "https://github.com/szTheory/exifcleaner"
-  weight = 3
+  weight = 4
+
 
 ########################### Default parameters ##########################
 [params]
