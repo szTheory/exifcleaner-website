@@ -9,6 +9,16 @@
 
 Built with Hugo, a static site generator written in Go. Uses npm for JavaScript package management.
 
+### Running locally
+
+Start the website with
+
+```bash
+hugo server
+```
+
+Then open http://localhost:1313/
+
 ## License
 
 MIT
