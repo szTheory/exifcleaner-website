@@ -15,7 +15,7 @@
     {{- if ne (mod $index 2) 0 }}
     <div class="row mb-40">
       <div class="col-md-6 text-center mb-5 mb-lg-0">
-        <img class="img-fluid" src="{{ .image | absURL }}" loading="lazy" alt="">
+        <img class="img-fluid" src="{{ .image | absURL }}" alt="">
       </div>
       <div class="col-md-6 align-self-center text-center text-md-left">
         <div class="content">
@@ -53,7 +53,7 @@
         </div>
       </div>
       <div class="col-md-6 order-md-2 order-1 text-center mb-5 mb-lg-0">
-        <img class="img-fluid" src="{{ .image | absURL }}" loading="lazy" alt="">
+        <img class="img-fluid" src="{{ .image | absURL }}" alt="">
       </div>
     </div>
     {{ end }}
