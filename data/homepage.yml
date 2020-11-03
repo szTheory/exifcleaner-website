@@ -81,6 +81,15 @@ aboutProduct:
         label: "Check Features"
         link: "#"
 
+    - image: "images/translations.png"
+      title: "Multi-language"
+      icon: " tf-ion-ios-world"
+      content: "Translated into French, German, Japanese, Polish, Portuguese, Spanish, and Slovak."
+      button:
+        enable: false
+        label: "Check Features"
+        link: "#"
+
 ############################## Testimonial ##########################
 testimonial:
   enable: true
