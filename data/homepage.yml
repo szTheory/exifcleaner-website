@@ -66,7 +66,7 @@ aboutProduct:
     - image: "images/batchprocessing.png"
       title: "Multi-Core Batch Processing"
       icon: "tf-ion-coffee"
-      content: "Exif read/write operations are asyncronously spawned to separate processes that automatically distribute across available CPU cores."
+      content: "Exif read/write operations are asyncronously spawned to a process pool that distributes work across your CPU cores."
       button:
         enable: false
         label: "Check Features"
