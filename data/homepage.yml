@@ -84,7 +84,7 @@ aboutProduct:
     - image: "images/translations.png"
       title: "Multi-language"
       icon: " tf-ion-ios-world"
-      content: "Translated into Arabic, Chinese, Croatian, Danish, Dutch, French, German, Hungarian, Italian, Japanese, Polish, Portuguese, Russian, Slovak, Spanish, Swedish, Turkish, and Ukranian."
+      content: "Translated into Arabic, Chinese, Croatian, Danish, Dutch, French, German, Hungarian, Italian, Japanese, Malayalam, Polish, Portuguese, Russian, Slovak, Spanish, Swedish, Turkish, and Ukranian."
       button:
         enable: false
         label: "Check Features"
