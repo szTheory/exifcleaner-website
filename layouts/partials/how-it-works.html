@@ -3,7 +3,7 @@
     <h2 class="heading section-heading" data-reveal>How it works</h2>
 
     <div class="steps">
-      {{ range .Site.Data.homepage.steps }}
+      {{ range hugo.Data.homepage.steps }}
       <div class="step" data-reveal>
         <div class="step__number">{{ .number }}</div>
         <h3 class="step__title">{{ .title }}</h3>

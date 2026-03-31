@@ -1,7 +1,7 @@
 <section class="section" id="testimonials">
   <div class="container">
     <div class="testimonials__grid">
-      {{ range .Site.Data.homepage.testimonials }}
+      {{ range hugo.Data.homepage.testimonials }}
       <blockquote class="testimonial" data-reveal>
         <p class="testimonial__quote">{{ .quote }}</p>
         <cite class="testimonial__author">

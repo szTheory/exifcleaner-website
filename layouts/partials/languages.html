@@ -2,8 +2,8 @@
   <div class="container">
     <div class="languages__grid" data-reveal>
       <div class="languages__content">
-        <h2 class="heading">{{ .Site.Data.homepage.languages.title }}</h2>
-        <p class="text-secondary" style="margin-top: var(--space-md);">{{ .Site.Data.homepage.languages.subtitle }}</p>
+        <h2 class="heading">{{ hugo.Data.homepage.languages.title }}</h2>
+        <p class="text-secondary" style="margin-top: var(--space-md);">{{ hugo.Data.homepage.languages.subtitle }}</p>
       </div>
       <div class="languages__screenshot">
         <div class="screenshot-frame">
@@ -15,7 +15,7 @@
             </svg>
             <span class="screenshot-frame__title">ExifCleaner</span>
           </div>
-          <img src="{{ .Site.Data.homepage.languages.screenshot }}" alt="{{ .Site.Data.homepage.languages.alt }}" loading="lazy" width="1200" height="800">
+          <img src="{{ hugo.Data.homepage.languages.screenshot }}" alt="{{ hugo.Data.homepage.languages.alt }}" loading="lazy" width="1200" height="800">
         </div>
       </div>
     </div>

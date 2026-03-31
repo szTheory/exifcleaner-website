@@ -3,7 +3,7 @@
     <h2 class="heading section-heading" data-reveal>Features</h2>
 
     <div class="features__grid">
-      {{ range $index, $feature := .Site.Data.homepage.features }}
+      {{ range $index, $feature := hugo.Data.homepage.features }}
       <div class="feature" data-reveal>
         <div class="feature__screenshot">
           <div class="screenshot-frame">

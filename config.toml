@@ -1,6 +1,7 @@
 baseURL = "https://exifcleaner.com/"
 languageCode = "en-us"
 title = "ExifCleaner"
+disableKinds = ["taxonomy", "term"]
 
 [menu]
   [[menu.main]]
