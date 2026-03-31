@@ -1,0 +1,58 @@
+/* Scroll reveal animations */
+[data-reveal] {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+[data-reveal].revealed {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Staggered reveals for grids */
+[data-reveal-delay="1"] { transition-delay: 0.1s; }
+[data-reveal-delay="2"] { transition-delay: 0.2s; }
+[data-reveal-delay="3"] { transition-delay: 0.3s; }
+[data-reveal-delay="4"] { transition-delay: 0.4s; }
+
+/* Dissolve animation */
+.dissolve-text span {
+	display: inline;
+	transition: opacity 0.6s ease-out, filter 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.dissolve-text.dissolving span {
+	opacity: 0;
+	filter: blur(4px);
+	transform: translateY(-4px);
+}
+
+/* Hero tilt transition */
+.hero__screenshot {
+	transition: transform 0.15s ease-out;
+}
+
+/* Reduced motion: instant, no transforms */
+@media (prefers-reduced-motion: reduce) {
+	[data-reveal] {
+		opacity: 1;
+		transform: none;
+		transition: none;
+	}
+
+	.hero__screenshot {
+		transition: none !important;
+		transform: none !important;
+	}
+
+	.dissolve-text span {
+		transition: none;
+	}
+
+	.dissolve-text.dissolving span {
+		transform: none;
+		filter: none;
+		transition: opacity 0.2s ease-out;
+	}
+}

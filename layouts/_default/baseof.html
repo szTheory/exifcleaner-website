@@ -27,7 +27,8 @@
   {{ $features := resources.Get "css/_features.css" }}
   {{ $testimonials := resources.Get "css/_testimonials.css" }}
   {{ $cta := resources.Get "css/_cta.css" }}
-  {{ $css := slice $tokens $reset $typography $layout $nav $hero $features $testimonials $cta | resources.Concat "css/bundle.css" | minify | fingerprint }}
+  {{ $animations := resources.Get "css/_animations.css" }}
+  {{ $css := slice $tokens $reset $typography $layout $nav $hero $features $testimonials $cta $animations | resources.Concat "css/bundle.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 </head>
 <body>
