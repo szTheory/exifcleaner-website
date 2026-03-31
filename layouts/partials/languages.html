@@ -1,0 +1,23 @@
+<section class="section" id="languages">
+  <div class="container">
+    <div class="languages__grid" data-reveal>
+      <div class="languages__content">
+        <h2 class="heading">{{ .Site.Data.homepage.languages.title }}</h2>
+        <p class="text-secondary" style="margin-top: var(--space-md);">{{ .Site.Data.homepage.languages.subtitle }}</p>
+      </div>
+      <div class="languages__screenshot">
+        <div class="screenshot-frame">
+          <div class="screenshot-frame__titlebar">
+            <svg class="screenshot-frame__dots" width="54" height="14" viewBox="0 0 54 14" aria-hidden="true">
+              <circle cx="7" cy="7" r="5.5" fill="#FF5F57"/>
+              <circle cx="27" cy="7" r="5.5" fill="#FEBC2E"/>
+              <circle cx="47" cy="7" r="5.5" fill="#28C840"/>
+            </svg>
+            <span class="screenshot-frame__title">ExifCleaner</span>
+          </div>
+          <img src="{{ .Site.Data.homepage.languages.screenshot }}" alt="{{ .Site.Data.homepage.languages.alt }}" loading="lazy" width="1200" height="800">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

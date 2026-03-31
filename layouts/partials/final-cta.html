@@ -1,0 +1,13 @@
+<section class="section section--dark final-cta" id="download">
+  <div class="container">
+    <h2 class="final-cta__headline" data-reveal>{{ .Site.Data.homepage.final_cta.headline }}</h2>
+    <div class="final-cta__actions" data-reveal>
+      <a href="{{ .Site.Data.homepage.final_cta.download_url }}" class="btn btn--inverted">Download</a>
+    </div>
+    <div class="final-cta__badge" data-reveal>
+      <a href="https://github.com/{{ .Site.Data.homepage.final_cta.github_repo }}" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.shields.io/github/stars/{{ .Site.Data.homepage.final_cta.github_repo }}?style=social" alt="GitHub stars" width="100" height="20">
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,14 @@
+<section class="section" id="testimonials">
+  <div class="container">
+    <div class="testimonials__grid">
+      {{ range .Site.Data.homepage.testimonials }}
+      <blockquote class="testimonial" data-reveal>
+        <p class="testimonial__quote">{{ .quote }}</p>
+        <cite class="testimonial__author">
+          <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">@{{ .author }}</a>
+        </cite>
+      </blockquote>
+      {{ end }}
+    </div>
+  </div>
+</section>

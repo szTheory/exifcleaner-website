@@ -1,108 +1,80 @@
-############################# banner ############################
-banner:
-  enable: true
-  title: "Privacy and Performance"
-  content: "Attackers use GPS and device metadata to profile their victims. It also increases image file size. Sweep it away, with ExifCleaner."
-  image: "images/icon.svg"
-  button:
-    link: "https://github.com/szTheory/exifcleaner/releases"
-    label: "Download for FREE"
+# Hero
+hero:
+  headline: "Metadata, removed."
+  subhead: "Fast, private, and free. Strip EXIF data from photos, videos, and PDFs."
+  download_url: "https://github.com/szTheory/exifcleaner/releases"
+  github_repo: "szTheory/exifcleaner"
+  screenshot: "/images/screenshots/light-processed.png"
 
-############################# Feature ############################
+# How it works
+steps:
+  - number: "1"
+    title: "Drop"
+    description: "Drag files or folders onto the window."
+  - number: "2"
+    title: "Clean"
+    description: "Metadata is stripped instantly."
+  - number: "3"
+    title: "Done"
+    description: "Your files are private."
+
+# Features
 features:
-  enable: true
-  title: "Core Features"
-  image: "images/demo.gif"
+  - title: "Batch Processing"
+    description: "Process tens, hundreds, or even thousands of files at once. ExifCleaner handles them all without breaking a sweat."
+    screenshot: "/images/screenshots/light-processed.png"
+    alt: "ExifCleaner processing multiple files simultaneously"
+  - title: "Dark Mode"
+    description: "Automatically matches your operating system theme. Light or dark, ExifCleaner looks right at home."
+    screenshot: "/images/screenshots/dark-processed.png"
+    alt: "ExifCleaner in dark mode"
+  - title: "Metadata Inspection"
+    description: "See exactly what was stripped. Expand any file to view a before-and-after diff of removed metadata fields."
+    screenshot: "/images/screenshots/metadata-diff.png"
+    alt: "ExifCleaner metadata diff view"
+  - title: "Privacy Controls"
+    description: "Fine-tune what gets removed. Preserve orientation, save copies, strip extended attributes -- your choice."
+    screenshot: "/images/screenshots/settings-open.png"
+    alt: "ExifCleaner settings panel with privacy toggles"
 
-  # feature at the left of the image
-  leftSide:
-    - icon: "tf-ion-ios-speedometer"
-      title: "Fast"
-      content: "Built on top of the proven [ExifTool](https://exiftool.org/) library."
+# Cross-platform
+cross_platform:
+  title: "Available for macOS, Windows, and Linux."
+  mac_screenshot: "/images/screenshots/light-processed.png"
+  win_screenshot: "/images/screenshots/light-processed.png"
+  linux_screenshot: "/images/screenshots/light-processed.png"
 
-    - icon: "tf-ion-code-working"
-      title: "Free and open source"
-      content: "MIT licensed so you can modify it to your liking."
+# Language support
+languages:
+  title: "Your language, built in."
+  subtitle: "24+ languages. No downloads, no plugins."
+  screenshot: "/images/screenshots/language-switch.png"
+  alt: "ExifCleaner language switching interface"
 
-    - icon: "tf-ion-ios-monitor"
-      title: "Cross-platform application"
-      content: "Windows, Mac, Linux versions available."
+# Privacy and open source
+privacy:
+  trust_line: "No network access. No telemetry. Verify it yourself."
+  open_source_line: "Open source — verify our privacy claims yourself."
+  github_url: "https://github.com/szTheory/exifcleaner"
+  formats: "Images, videos, and PDFs. JPEG, PNG, WebP, TIFF, GIF, MP4, MOV, M4A, PDF, and more."
 
-    - icon: "tf-ion-android-hand"
-      title: "Drag and Drop GUI"
-      content: "Quick and simple workflow for daily use."
+# Testimonials
+testimonials:
+  - quote: "I absolutely love this piece of software. It works very well."
+    author: "fishdrum"
+    url: "https://github.com/szTheory/exifcleaner/issues/168"
+  - quote: "It's crazy that this is the only simple and modern exif cleaner we got on Windows"
+    author: "realgooseman"
+    url: "https://github.com/szTheory/exifcleaner/issues/251"
+  - quote: "I've avoided any applications that use Electron... but your app looks so useful that I made an exception!"
+    author: "Gitoffthelawn"
+    url: "https://github.com/szTheory/exifcleaner/issues/116"
+  - quote: "Thanks for your free app — it is very nicely done."
+    author: "Team-Sys"
+    url: "https://github.com/szTheory/exifcleaner/issues/100"
 
-  # feature at the right of the image
-  rightSide:
-    - icon: "tf-ion-images"
-      title: "PNG, JPG, GIF, and TIFF"
-      content: "Supports the most popular image formats."
-
-    - icon: "tf-ion-ios-film"
-      title: "M4A, MOV, QT, and MP4"
-      content: "Removes metadata from video files."
-
-    - icon: "tf-ion-android-document"
-      title: "PDF support"
-      content: "Also removes metadata from PDF documents."
-
-    - icon: "tf-ion-coffee"
-      title: "Batch-processing"
-      content: "Process tens, hundreds, or even thousands of files at once."
-
-############################# promo ############################
-promo:
-  enable: true
-  image: "images/darkmode.png"
-  title: "Dark Mode"
-  icon: "tf-ion-ios-moon"
-  content: "Automatically detects your operating system's dark mode setting to reduce eye strain. It will change back to day mode when your computer does."
-
-############################# About Product #######################
-aboutProduct:
-  enable: true
-  title: ""
-  items:
-    - image: "images/batchprocessing.png"
-      title: "Multi-Core Batch Processing"
-      icon: "tf-ion-coffee"
-      content: "Exif read/write operations are asyncronously spawned to a process pool that distributes work across your CPU cores."
-      button:
-        enable: false
-        label: "Check Features"
-        link: "#"
-
-    - image: "images/screenshot.png"
-      title: "Drag and Drop"
-      icon: "tf-ion-android-hand"
-      content: "Drag any image onto the app window to begin processing and strip exif metadata. That's it!"
-      button:
-        enable: false
-        label: "Check Features"
-        link: "#"
-
-    - image: "images/translations.png"
-      title: "Multi-language"
-      icon: " tf-ion-ios-world"
-      content: "Translated into Arabic, Chinese, Croatian, Czech, Danish, Dutch, French, German, Hungarian, Italian, Japanese, Malayalam, Polish, Portuguese, Russian, Slovak, Spanish, Swedish, Turkish, Ukranian, and Vietnamese."
-      button:
-        enable: false
-        label: "Check Features"
-        link: "#"
-
-############################## Testimonial ##########################
-testimonial:
-  enable: true
-  title: "User feedback"
-  testimonialItem:
-    # testimonial item loop
-    - name: "Napolean Maximus"
-      designation: "President, World"
-      image: "images/avatar.jpg"
-      content: "I used to have exif data all up in my images. Thanks to ExifCleaner, that is no longer the case!"
-
-  ################# button ###############
-  button:
-    enable: true
-    label: "Download for FREE"
-    link: "https://github.com/szTheory/exifcleaner/releases"
+# Final CTA
+final_cta:
+  headline: "Ready to clean your files?"
+  download_url: "https://github.com/szTheory/exifcleaner/releases"
+  github_repo: "szTheory/exifcleaner"
