@@ -18,7 +18,16 @@
   <meta property="og:url" content="{{ .Site.BaseURL }}">
   <meta property="og:image" content="{{ "images/og-image.png" | absURL }}">
 
-  {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
+  {{ $tokens := resources.Get "css/_tokens.css" }}
+  {{ $reset := resources.Get "css/_reset.css" }}
+  {{ $typography := resources.Get "css/_typography.css" }}
+  {{ $layout := resources.Get "css/_layout.css" }}
+  {{ $nav := resources.Get "css/_nav.css" }}
+  {{ $hero := resources.Get "css/_hero.css" }}
+  {{ $features := resources.Get "css/_features.css" }}
+  {{ $testimonials := resources.Get "css/_testimonials.css" }}
+  {{ $cta := resources.Get "css/_cta.css" }}
+  {{ $css := slice $tokens $reset $typography $layout $nav $hero $features $testimonials $cta | resources.Concat "css/bundle.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 </head>
 <body>
