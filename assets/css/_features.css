@@ -1,0 +1,135 @@
+.features__grid {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-3xl);
+}
+
+.feature {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--space-xl);
+	align-items: center;
+}
+
+.feature:nth-child(even) .feature__screenshot {
+	order: 2;
+}
+
+.feature:nth-child(even) .feature__content {
+	order: 1;
+}
+
+.feature__content {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-md);
+}
+
+.feature__title {
+	font-size: var(--font-heading);
+	font-weight: var(--weight-semibold);
+	line-height: var(--line-heading);
+	letter-spacing: var(--letter-heading);
+}
+
+.feature__description {
+	color: var(--color-text-secondary);
+	line-height: var(--line-body);
+}
+
+@media (max-width: 1023px) {
+	.feature {
+		grid-template-columns: 1fr;
+	}
+
+	.feature:nth-child(even) .feature__screenshot,
+	.feature:nth-child(even) .feature__content {
+		order: unset;
+	}
+}
+
+/* How it works */
+.steps {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--space-xl);
+	text-align: center;
+}
+
+.step__number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	background: var(--color-accent);
+	color: #fff;
+	font-size: var(--font-heading);
+	font-weight: var(--weight-bold);
+	margin: 0 auto var(--space-md);
+}
+
+.step__title {
+	font-size: var(--font-heading);
+	font-weight: var(--weight-semibold);
+	margin-bottom: var(--space-sm);
+}
+
+.step__description {
+	color: var(--color-text-secondary);
+}
+
+@media (max-width: 639px) {
+	.steps {
+		grid-template-columns: 1fr;
+		gap: var(--space-lg);
+	}
+}
+
+/* Cross-platform fanned layout */
+.cross-platform__showcase {
+	position: relative;
+	max-width: 900px;
+	margin: var(--space-xl) auto 0;
+	padding-bottom: 40px;
+}
+
+.cross-platform__frame {
+	position: absolute;
+	width: 85%;
+	left: 50%;
+}
+
+.cross-platform__frame--mac {
+	position: relative;
+	z-index: 3;
+	width: 100%;
+	left: 0;
+}
+
+.cross-platform__frame--win {
+	z-index: 2;
+	transform: translateX(-58%) translateY(12px) rotate(-3deg) scale(0.88);
+	top: 0;
+}
+
+.cross-platform__frame--linux {
+	z-index: 1;
+	transform: translateX(-42%) translateY(12px) rotate(3deg) scale(0.88);
+	top: 0;
+}
+
+/* Languages */
+.languages__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--space-xl);
+	align-items: center;
+}
+
+@media (max-width: 1023px) {
+	.languages__grid {
+		grid-template-columns: 1fr;
+	}
+}

@@ -1,0 +1,90 @@
+/* Privacy section */
+.privacy__trust {
+	font-size: var(--font-heading);
+	font-weight: var(--weight-semibold);
+	line-height: var(--line-heading);
+	letter-spacing: var(--letter-heading);
+	text-align: center;
+	margin-bottom: var(--space-lg);
+}
+
+.privacy__opensource {
+	text-align: center;
+	margin-bottom: var(--space-md);
+}
+
+.privacy__opensource a {
+	color: var(--color-accent);
+}
+
+.privacy__opensource a:hover {
+	text-decoration: underline;
+}
+
+.privacy__formats {
+	text-align: center;
+	color: var(--color-text-secondary);
+}
+
+/* Metadata dissolve target */
+.dissolve-text {
+	display: block;
+	text-align: center;
+	color: var(--color-text-tertiary);
+	font-size: var(--font-label);
+	font-family: 'SF Mono', 'Fira Code', 'Fira Mono', monospace;
+	margin-top: var(--space-xl);
+	overflow: hidden;
+}
+
+.dissolve-text span {
+	display: inline-block;
+	transition: opacity 0.4s ease-out, filter 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.dissolve-text.dissolving span {
+	opacity: 0;
+	filter: blur(4px);
+	transform: translateY(-4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.dissolve-text span {
+		transition: none;
+	}
+	.dissolve-text.dissolving span {
+		transform: none;
+		filter: none;
+		transition: opacity 0.2s ease-out;
+	}
+}
+
+/* Final CTA dark section */
+.final-cta {
+	text-align: center;
+}
+
+.final-cta__headline {
+	font-size: var(--font-heading);
+	font-weight: var(--weight-semibold);
+	color: #fff;
+	margin-bottom: var(--space-lg);
+}
+
+.final-cta__actions {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--space-md);
+	flex-wrap: wrap;
+}
+
+.final-cta__badge {
+	margin-top: var(--space-md);
+}
+
+/* Section headings (shared) */
+.section-heading {
+	text-align: center;
+	margin-bottom: var(--space-xl);
+}

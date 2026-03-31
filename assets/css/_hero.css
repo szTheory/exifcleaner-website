@@ -1,0 +1,121 @@
+.hero {
+	padding: var(--space-4xl) 0 var(--space-3xl);
+	text-align: center;
+}
+
+.hero__headline {
+	margin-bottom: var(--space-md);
+}
+
+.hero__subhead {
+	margin-bottom: var(--space-xl);
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.hero__actions {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--space-md);
+	margin-bottom: var(--space-3xl);
+	flex-wrap: wrap;
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-family: inherit;
+	font-weight: var(--weight-semibold);
+	border: none;
+	cursor: pointer;
+	text-decoration: none;
+	transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.btn--primary {
+	background: var(--color-accent);
+	color: #fff;
+	font-size: var(--font-body);
+	height: 48px;
+	padding: 0 var(--space-lg);
+	border-radius: var(--radius-sm);
+}
+
+.btn--primary:hover {
+	background: var(--color-accent-hover);
+	transform: translateY(-1px);
+}
+
+.btn--inverted {
+	background: #fff;
+	color: var(--color-accent);
+	font-size: var(--font-body);
+	height: 48px;
+	padding: 0 var(--space-lg);
+	border-radius: var(--radius-sm);
+}
+
+.btn--inverted:hover {
+	background: var(--color-bg-secondary);
+	transform: translateY(-1px);
+}
+
+.hero__screenshot {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+/* Screenshot frame (macOS window chrome) */
+.screenshot-frame {
+	border-radius: var(--radius-lg);
+	overflow: hidden;
+	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
+	background: var(--color-bg-primary);
+}
+
+.screenshot-frame__titlebar {
+	display: flex;
+	align-items: center;
+	height: 40px;
+	padding: 0 var(--space-md);
+	background: #E8E8E8;
+	border-bottom: 1px solid #D1D1D1;
+	position: relative;
+}
+
+.screenshot-frame__titlebar--win {
+	justify-content: space-between;
+}
+
+.screenshot-frame__win-controls {
+	display: flex;
+	align-items: center;
+}
+
+.screenshot-frame__dots {
+	flex-shrink: 0;
+}
+
+.screenshot-frame__title {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 13px;
+	font-weight: var(--weight-medium);
+	color: #4D4D4D;
+}
+
+.screenshot-frame img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+/* Hero tilt effect (JS adds inline transform) */
+.hero__screenshot {
+	transition: transform 0.15s ease-out;
+	will-change: transform;
+}
