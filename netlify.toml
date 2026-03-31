@@ -1,5 +1,5 @@
-[build.environment] # global variables
-  HUGO_VERSION = "0.60.1"
+[build.environment]
+  HUGO_VERSION = "0.159.1"
 
 [context.production.environment]
   HUGO_ENV = "production"

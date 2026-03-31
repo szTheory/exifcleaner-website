@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Site.Params.pageTitle }}</title>
+  <meta name="description" content="{{ .Site.Params.description }}">
+  {{ hugo.Generator }}
+
+  <link rel="preload" href="/fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="shortcut icon" href="{{ "images/favicon.ico" | absURL }}" type="image/x-icon">
+  <link rel="icon" href="{{ "images/favicon.ico" | absURL }}" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ .Site.Params.pageTitle }}">
+  <meta property="og:description" content="{{ .Site.Params.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ .Site.BaseURL }}">
+  <meta property="og:image" content="{{ "images/og-image.png" | absURL }}">
+
+  {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+</head>
+<body>
+  {{ block "main" . }}{{ end }}
+
+  {{ $js := resources.Get "js/main.js" | minify | fingerprint }}
+  <script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+</body>
+</html>
