@@ -14,10 +14,17 @@
 }
 
 .nav__logo {
+	display: flex;
+	align-items: center;
+	gap: var(--space-sm);
 	font-size: var(--font-heading);
 	font-weight: var(--weight-semibold);
 	color: var(--color-text-primary);
 	letter-spacing: var(--letter-heading);
+}
+
+.nav__logo-icon {
+	flex-shrink: 0;
 }
 
 .nav__links {
