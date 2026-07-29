@@ -125,6 +125,129 @@
 		});
 	}
 
+	// ─── Appearance Switch ──────────────────────────────────────────
+	//
+	// The head script already applied the theme before first paint, and CSS draws the
+	// checked segment off [data-theme]. This owns only the parts CSS cannot: persistence,
+	// keyboard behaviour, ARIA state, and keeping <picture> in step.
+	var THEME_KEY = "exifcleaner-theme";
+	var THEME_ORDER = ["light", "system", "dark"];
+
+	function storedTheme() {
+		try {
+			var t = localStorage.getItem(THEME_KEY);
+			return t === "light" || t === "dark" ? t : "system";
+		} catch (e) {
+			return "system";
+		}
+	}
+
+	function systemPrefersDark() {
+		return window.matchMedia("(prefers-color-scheme: dark)").matches;
+	}
+
+	function resolvedTheme() {
+		var choice = storedTheme();
+		if (choice !== "system") return choice;
+		return systemPrefersDark() ? "dark" : "light";
+	}
+
+	// <picture> keys off the media query, not off [data-theme], so an explicit choice that
+	// disagrees with the OS would otherwise still serve the wrong screenshot. Rewriting the
+	// source's media makes it always- or never-matching; <picture> re-evaluates on mutation.
+	function syncPictures(theme) {
+		var sources = document.querySelectorAll("[data-theme-src-dark]");
+		for (var i = 0; i < sources.length; i++) {
+			sources[i].media = theme === "dark" ? "all" : "not all";
+		}
+	}
+
+	function initThemeSwitch() {
+		var group = document.querySelector(".theme-switch");
+		if (!group) return;
+
+		var opts = Array.prototype.slice.call(
+			group.querySelectorAll(".theme-switch__opt"),
+		);
+
+		function apply(choice, moveFocus) {
+			if (choice === "system") {
+				document.documentElement.removeAttribute("data-theme");
+			} else {
+				document.documentElement.setAttribute("data-theme", choice);
+			}
+			try {
+				// Store the three-valued *intent*, never the resolved theme. Writing "dark"
+				// when the user picked Auto silently converts a system-follow into a
+				// permanent lock the next time their OS switches.
+				if (choice === "system") localStorage.removeItem(THEME_KEY);
+				else localStorage.setItem(THEME_KEY, choice);
+			} catch (e) {}
+
+			opts.forEach(function (opt) {
+				var checked = opt.getAttribute("data-theme-value") === choice;
+				opt.setAttribute("aria-checked", String(checked));
+				opt.tabIndex = checked ? 0 : -1;
+				if (checked && moveFocus) opt.focus();
+			});
+
+			syncPictures(resolvedTheme());
+		}
+
+		opts.forEach(function (opt) {
+			opt.addEventListener("click", function () {
+				apply(opt.getAttribute("data-theme-value"), false);
+			});
+
+			opt.addEventListener("keydown", function (e) {
+				var current = THEME_ORDER.indexOf(storedTheme());
+				var next = -1;
+				if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+					next = (current + 1) % THEME_ORDER.length;
+				} else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+					next = (current - 1 + THEME_ORDER.length) % THEME_ORDER.length;
+				} else if (e.key === "Home") {
+					next = 0;
+				} else if (e.key === "End") {
+					next = THEME_ORDER.length - 1;
+				}
+				if (next === -1) return;
+				e.preventDefault();
+				// Arrow keys select on focus, per the APG radiogroup pattern -- and focus
+				// must actually move, or the ring is stranded on a segment that just became
+				// tabindex="-1" and visibly desyncs from the checked state.
+				apply(THEME_ORDER[next], true);
+			});
+		});
+
+		// While the choice is "system" the page tracks the OS through color-scheme with no
+		// JS at all -- but <picture> still needs telling, since its media query and the
+		// rewritten media attribute are not the same thing.
+		var media = window.matchMedia("(prefers-color-scheme: dark)");
+		var onSystemChange = function () {
+			if (storedTheme() === "system") syncPictures(resolvedTheme());
+		};
+		if (media.addEventListener) media.addEventListener("change", onSystemChange);
+		else if (media.addListener) media.addListener(onSystemChange);
+
+		// Reconcile ARIA with what the head script already painted.
+		var choice = storedTheme();
+		opts.forEach(function (opt) {
+			var checked = opt.getAttribute("data-theme-value") === choice;
+			opt.setAttribute("aria-checked", String(checked));
+			opt.tabIndex = checked ? 0 : -1;
+		});
+		syncPictures(resolvedTheme());
+
+		// Enable the indicator transition only after the first paint has committed. A single
+		// rAF fires before style commit in some engines and you get the slide-in anyway.
+		requestAnimationFrame(function () {
+			requestAnimationFrame(function () {
+				document.documentElement.classList.add("theme-ready");
+			});
+		});
+	}
+
 	// ─── Smooth Scroll with Nav Offset ──────────────────────────────
 	function initSmoothScroll() {
 		document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
@@ -154,6 +277,7 @@
 		initTiltEffect();
 		initMetadataDissolve();
 		initMobileNav();
+		initThemeSwitch();
 		initSmoothScroll();
 	});
 })();

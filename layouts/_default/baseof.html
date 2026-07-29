@@ -2,7 +2,25 @@
 <html lang="{{ .Site.LanguageCode }}">
 <head>
   <meta charset="utf-8">
+  {{/*
+    Theme init. Must be inline and synchronous, and must come before the stylesheet:
+    main.js is deferred, so applying the theme there guarantees a light paint followed by a
+    visible snap. The parser stops here, sets the attribute, and resumes — before layout.
+
+    Absence of data-theme means "follow the OS", which CSS handles via
+    `color-scheme: light dark`. Only an explicit choice is written, and only from an
+    allowlist — localStorage is user-writable and this value goes straight into an
+    attribute. try/catch is required rather than defensive: localStorage *throws* in Safari
+    private browsing, and an uncaught throw here lands before the stylesheet link.
+
+    data-js gates the switcher's visibility, so no-JS visitors get a clean nav and the OS
+    preference instead of a control that does nothing.
+
+    No CSP exists on this site today. If one is ever added, this needs a sha256- hash.
+  */}}
+  <script>(function(){try{var t=localStorage.getItem("exifcleaner-theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t)}document.documentElement.setAttribute("data-js","")}catch(e){}})()</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
   <title>{{ .Site.Params.pageTitle }}</title>
   <meta name="description" content="{{ .Site.Params.description }}">
   {{ hugo.Generator }}

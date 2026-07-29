@@ -88,3 +88,158 @@
 		display: block;
 	}
 }
+
+/* ── Appearance switch ─────────────────────────────────────────────────────────
+ *
+ * Three segments, icon-only on desktop. The app's own control is icon + text inside a
+ * filled track, which is right for a settings drawer but would out-weigh the Download CTA
+ * in a minimal header — the CTA has to stay the visual anchor. So: same semantics, much
+ * lighter chrome. Text labels come back on mobile, where there is room and where "Auto"
+ * most needs explaining.
+ *
+ * Hidden without JS. A visible control that does nothing is worse than no control; no-JS
+ * visitors still get their OS preference via color-scheme.
+ */
+.theme-switch {
+	display: none;
+	position: relative;
+	gap: 2px;
+	padding: 2px;
+	border-radius: var(--radius-sm);
+}
+
+:root[data-js] .theme-switch {
+	display: flex;
+}
+
+.theme-switch__opt {
+	position: relative;
+	z-index: 1;
+	display: grid;
+	place-items: center;
+	width: 28px;
+	height: 28px;
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 4px;
+	color: var(--color-text-tertiary);
+	cursor: pointer;
+	transition: color 0.15s ease;
+}
+
+/*
+ * A 44x44 touch target without inflating the painted box. Horizontal expansion is clamped
+ * so adjacent targets cannot overlap — overlapping hit areas mean a tap lands on the wrong
+ * theme, which is worse than a slightly small one.
+ */
+.theme-switch__opt::after {
+	content: "";
+	position: absolute;
+	inset: -8px -1px;
+}
+
+.theme-switch__opt:hover {
+	color: var(--color-text-secondary);
+}
+
+.theme-switch__opt:focus-visible {
+	outline: 2px solid var(--color-focus-ring);
+	outline-offset: 2px;
+}
+
+.theme-switch__label {
+	display: none;
+}
+
+/*
+ * Checked state, driven entirely off <html> so it is correct on first paint. The head
+ * script sets data-theme before any layout happens; JS never has to repaint this.
+ */
+:root:not([data-theme]) .theme-switch__opt[data-theme-value="system"],
+:root[data-theme="light"] .theme-switch__opt[data-theme-value="light"],
+:root[data-theme="dark"] .theme-switch__opt[data-theme-value="dark"] {
+	color: var(--color-text-primary);
+}
+
+.theme-switch__indicator {
+	position: absolute;
+	z-index: 0;
+	top: 2px;
+	left: 2px;
+	width: 28px;
+	height: 28px;
+	border-radius: 4px;
+	background: var(--color-bg-secondary);
+	border: 1px solid var(--color-border);
+}
+
+:root:not([data-theme]) .theme-switch__indicator {
+	transform: translateX(30px);
+}
+
+:root[data-theme="dark"] .theme-switch__indicator {
+	transform: translateX(60px);
+}
+
+/*
+ * transform only — compositor-only, no layout, no paint. The page's own colour change is
+ * deliberately NOT animated: a viewport-wide cross-fade forces paint on every element and
+ * the instant snap actually reads as more responsive.
+ *
+ * Default-off so the indicator does not slide in from the left on first load, and so very
+ * old UAs that report no preference degrade to static.
+ */
+@media (prefers-reduced-motion: no-preference) {
+	:root.theme-ready .theme-switch__indicator {
+		transition: transform 150ms cubic-bezier(0.2, 0, 0, 1);
+	}
+}
+
+@media (max-width: 639px) {
+	.nav__theme-item {
+		width: 100%;
+		border-top: 1px solid var(--color-border);
+		padding-top: var(--space-md);
+	}
+
+	.theme-switch {
+		width: 100%;
+		background: var(--color-bg-secondary);
+		padding: 3px;
+	}
+
+	.theme-switch__opt {
+		flex: 1;
+		width: auto;
+		/* A real 44px box on touch, so the pseudo-element hit area is not needed. */
+		height: 44px;
+		grid-auto-flow: column;
+		gap: var(--space-sm);
+	}
+
+	.theme-switch__opt::after {
+		content: none;
+	}
+
+	.theme-switch__label {
+		display: inline;
+		font-size: var(--font-label);
+	}
+
+	/* Equal thirds, so the desktop pixel offsets do not apply. */
+	.theme-switch__indicator {
+		top: 3px;
+		left: 3px;
+		width: calc((100% - 6px) / 3);
+		height: 44px;
+	}
+
+	:root:not([data-theme]) .theme-switch__indicator {
+		transform: translateX(100%);
+	}
+
+	:root[data-theme="dark"] .theme-switch__indicator {
+		transform: translateX(200%);
+	}
+}
