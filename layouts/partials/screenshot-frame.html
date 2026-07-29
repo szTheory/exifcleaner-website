@@ -1,0 +1,43 @@
+{{/*
+  Window chrome around an app screenshot.
+
+  The screenshots themselves are captured bare (see exifcleaner-electron
+  scripts/generate-screenshots.ts) and the chrome is drawn here in HTML/CSS. That keeps it
+  crisp at any width and lets a single macOS screenshot serve the Windows and Linux tabs.
+
+  Params:
+    src      (required) image path
+    alt      (required) alt text
+    theme    "dark" for dark-mode screenshots, so the titlebar matches the app instead of
+             pasting light-grey macOS chrome onto a near-black window. Defaults to light.
+    variant  "win" for the Windows control glyphs. Defaults to macOS traffic lights.
+    loading  "eager" or "lazy" (default "lazy")
+    class    extra classes on the frame element
+
+  Dimensions are the real 1920x1344 of the source PNGs. They were previously declared as
+  1200x800, a different aspect ratio, which made the browser reserve the wrong box and
+  shift the layout as each image loaded.
+*/}}
+<div class="screenshot-frame{{ with .class }} {{ . }}{{ end }}{{ if eq .theme "dark" }} screenshot-frame--dark{{ end }}">
+  <div class="screenshot-frame__titlebar{{ if eq .variant "win" }} screenshot-frame__titlebar--win{{ end }}">
+    {{ if eq .variant "win" }}
+    <span class="screenshot-frame__title">ExifCleaner</span>
+    <div class="screenshot-frame__win-controls" aria-hidden="true">
+      <svg width="46" height="14" viewBox="0 0 46 14">
+        <rect x="0" y="4" width="10" height="1" fill="currentColor"/>
+        <rect x="18" y="2" width="10" height="10" fill="none" stroke="currentColor" stroke-width="1"/>
+        <line x1="36" y1="3" x2="46" y2="11" stroke="currentColor" stroke-width="1"/>
+        <line x1="46" y1="3" x2="36" y2="11" stroke="currentColor" stroke-width="1"/>
+      </svg>
+    </div>
+    {{ else }}
+    <svg class="screenshot-frame__dots" width="54" height="14" viewBox="0 0 54 14" aria-hidden="true">
+      <circle cx="7" cy="7" r="5.5" fill="#FF5F57"/>
+      <circle cx="27" cy="7" r="5.5" fill="#FEBC2E"/>
+      <circle cx="47" cy="7" r="5.5" fill="#28C840"/>
+    </svg>
+    <span class="screenshot-frame__title">ExifCleaner</span>
+    {{ end }}
+  </div>
+  <img src="{{ .src }}" alt="{{ .alt }}" loading="{{ .loading | default "lazy" }}" width="1920" height="1344">
+</div>

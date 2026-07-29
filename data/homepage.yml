@@ -28,6 +28,8 @@ features:
     description: "Automatically matches your operating system theme. Light or dark, ExifCleaner looks right at home."
     screenshot: "/images/screenshots/dark-processed.png"
     alt: "ExifCleaner in dark mode"
+    # Gives this card dark window chrome instead of the default light titlebar.
+    theme: "dark"
   - title: "Metadata Inspection"
     description: "See exactly what was stripped. Expand any file to view a before-and-after diff of removed metadata fields."
     screenshot: "/images/screenshots/metadata-diff.png"
