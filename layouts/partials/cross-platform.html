@@ -4,46 +4,23 @@
 
     <div class="cross-platform__showcase" data-reveal>
       {{/* Windows - behind left */}}
-      <div class="screenshot-frame cross-platform__frame cross-platform__frame--win">
-        <div class="screenshot-frame__titlebar screenshot-frame__titlebar--win">
-          <span class="screenshot-frame__title">ExifCleaner</span>
-          <div class="screenshot-frame__win-controls" aria-hidden="true">
-            <svg width="46" height="14" viewBox="0 0 46 14">
-              <rect x="0" y="4" width="10" height="1" fill="#4D4D4D"/>
-              <rect x="18" y="2" width="10" height="10" fill="none" stroke="#4D4D4D" stroke-width="1"/>
-              <line x1="36" y1="3" x2="46" y2="11" stroke="#4D4D4D" stroke-width="1"/>
-              <line x1="46" y1="3" x2="36" y2="11" stroke="#4D4D4D" stroke-width="1"/>
-            </svg>
-          </div>
-        </div>
-        <img src="{{ hugo.Data.homepage.cross_platform.win_screenshot }}" alt="ExifCleaner on Windows" loading="lazy" width="1200" height="800">
-      </div>
+      {{ partial "screenshot-frame.html" (dict
+        "src" hugo.Data.homepage.cross_platform.win_screenshot
+        "alt" "ExifCleaner on Windows"
+        "variant" "win"
+        "class" "cross-platform__frame cross-platform__frame--win") }}
 
       {{/* Linux - behind right */}}
-      <div class="screenshot-frame cross-platform__frame cross-platform__frame--linux">
-        <div class="screenshot-frame__titlebar">
-          <svg class="screenshot-frame__dots" width="54" height="14" viewBox="0 0 54 14" aria-hidden="true">
-            <circle cx="7" cy="7" r="5.5" fill="#FF5F57"/>
-            <circle cx="27" cy="7" r="5.5" fill="#FEBC2E"/>
-            <circle cx="47" cy="7" r="5.5" fill="#28C840"/>
-          </svg>
-          <span class="screenshot-frame__title">ExifCleaner</span>
-        </div>
-        <img src="{{ hugo.Data.homepage.cross_platform.linux_screenshot }}" alt="ExifCleaner on Linux" loading="lazy" width="1200" height="800">
-      </div>
+      {{ partial "screenshot-frame.html" (dict
+        "src" hugo.Data.homepage.cross_platform.linux_screenshot
+        "alt" "ExifCleaner on Linux"
+        "class" "cross-platform__frame cross-platform__frame--linux") }}
 
       {{/* macOS - front center */}}
-      <div class="screenshot-frame cross-platform__frame cross-platform__frame--mac">
-        <div class="screenshot-frame__titlebar">
-          <svg class="screenshot-frame__dots" width="54" height="14" viewBox="0 0 54 14" aria-hidden="true">
-            <circle cx="7" cy="7" r="5.5" fill="#FF5F57"/>
-            <circle cx="27" cy="7" r="5.5" fill="#FEBC2E"/>
-            <circle cx="47" cy="7" r="5.5" fill="#28C840"/>
-          </svg>
-          <span class="screenshot-frame__title">ExifCleaner</span>
-        </div>
-        <img src="{{ hugo.Data.homepage.cross_platform.mac_screenshot }}" alt="ExifCleaner on macOS" loading="lazy" width="1200" height="800">
-      </div>
+      {{ partial "screenshot-frame.html" (dict
+        "src" hugo.Data.homepage.cross_platform.mac_screenshot
+        "alt" "ExifCleaner on macOS"
+        "class" "cross-platform__frame cross-platform__frame--mac") }}
     </div>
   </div>
 </section>

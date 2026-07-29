@@ -1,0 +1,11 @@
+# Image assets must reach disk byte-for-byte. Git's `text=auto` heuristic decides
+# binary-ness by scanning for NUL bytes, which silently misfires on files that are
+# structurally binary but happen to contain none -- it corrupted the app's PDF test
+# fixture that way (exifcleaner#305). Listed explicitly rather than trusting it.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.pdf binary

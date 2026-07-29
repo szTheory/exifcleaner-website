@@ -6,17 +6,10 @@
       {{ range $index, $feature := hugo.Data.homepage.features }}
       <div class="feature" data-reveal>
         <div class="feature__screenshot">
-          <div class="screenshot-frame">
-            <div class="screenshot-frame__titlebar">
-              <svg class="screenshot-frame__dots" width="54" height="14" viewBox="0 0 54 14" aria-hidden="true">
-                <circle cx="7" cy="7" r="5.5" fill="#FF5F57"/>
-                <circle cx="27" cy="7" r="5.5" fill="#FEBC2E"/>
-                <circle cx="47" cy="7" r="5.5" fill="#28C840"/>
-              </svg>
-              <span class="screenshot-frame__title">ExifCleaner</span>
-            </div>
-            <img src="{{ $feature.screenshot }}" alt="{{ $feature.alt }}" loading="lazy" width="1200" height="800">
-          </div>
+          {{ partial "screenshot-frame.html" (dict
+            "src" $feature.screenshot
+            "alt" $feature.alt
+            "theme" $feature.theme) }}
         </div>
         <div class="feature__content">
           <h3 class="feature__title">{{ $feature.title }}</h3>
