@@ -33,4 +33,11 @@
 .section--dark {
 	background-color: var(--color-inverse-surface);
 	color: var(--color-inverse-text);
+	/*
+	 * In light mode the band is far darker than the page and needs no edge. In dark mode it
+	 * is only one elevation step lighter, so hairlines are what let it read as a deliberate
+	 * terminal zone rather than a faint rendering artifact. Transparent in light mode.
+	 */
+	border-top: 1px solid var(--color-border-inverse);
+	border-bottom: 1px solid var(--color-border-inverse);
 }

@@ -66,6 +66,26 @@
 .hero__screenshot {
 	max-width: 900px;
 	margin: 0 auto;
+	position: relative;
+}
+
+/*
+ * Dark-mode hero glow. A wide, very low-opacity teal wash behind the screenshot so the area
+ * around it feels lit rather than merely un-black — shadows alone can't do this on a dark
+ * page. --glow-hero is transparent in light mode, so this pseudo-element costs nothing there.
+ * Deliberately restricted to the hero: repeated across a page it becomes a SaaS cliche.
+ */
+.hero__screenshot::before {
+	content: "";
+	position: absolute;
+	inset: -12% -8%;
+	z-index: -1;
+	pointer-events: none;
+	background: radial-gradient(
+		ellipse at 50% 40%,
+		var(--glow-hero),
+		transparent 70%
+	);
 }
 
 /*
