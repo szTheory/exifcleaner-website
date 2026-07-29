@@ -122,6 +122,20 @@
 	--chrome-fg: #dddddd;
 }
 
+/*
+ * Auto frames swap their image with the site theme, so their chrome has to swap with it too
+ * — otherwise the dark capture arrives wearing a light titlebar. Outside @supports these
+ * frames keep the light chrome above and serve the light image, which stays consistent.
+ */
+@supports (color: light-dark(#fff, #000)) {
+	.screenshot-frame--auto {
+		--chrome-window: light-dark(#ffffff, #1a1a1a);
+		--chrome-bg: light-dark(#e8e8e8, #2c2c2e);
+		--chrome-border: light-dark(#d1d1d1, #1c1c1e);
+		--chrome-fg: light-dark(#4d4d4d, #dddddd);
+	}
+}
+
 .screenshot-frame__titlebar {
 	display: flex;
 	align-items: center;

@@ -8,8 +8,9 @@
         <div class="feature__screenshot">
           {{ partial "screenshot-frame.html" (dict
             "src" $feature.screenshot
+            "srcDark" $feature.screenshot_dark
             "alt" $feature.alt
-            "theme" $feature.theme) }}
+            "appearance" $feature.appearance) }}
         </div>
         <div class="feature__content">
           <h3 class="feature__title">{{ $feature.title }}</h3>

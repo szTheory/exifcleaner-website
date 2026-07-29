@@ -6,6 +6,7 @@
       {{/* Windows - behind left */}}
       {{ partial "screenshot-frame.html" (dict
         "src" hugo.Data.homepage.cross_platform.win_screenshot
+        "srcDark" hugo.Data.homepage.cross_platform.screenshot_dark
         "alt" "ExifCleaner on Windows"
         "variant" "win"
         "class" "cross-platform__frame cross-platform__frame--win") }}
@@ -13,12 +14,14 @@
       {{/* Linux - behind right */}}
       {{ partial "screenshot-frame.html" (dict
         "src" hugo.Data.homepage.cross_platform.linux_screenshot
+        "srcDark" hugo.Data.homepage.cross_platform.screenshot_dark
         "alt" "ExifCleaner on Linux"
         "class" "cross-platform__frame cross-platform__frame--linux") }}
 
       {{/* macOS - front center */}}
       {{ partial "screenshot-frame.html" (dict
         "src" hugo.Data.homepage.cross_platform.mac_screenshot
+        "srcDark" hugo.Data.homepage.cross_platform.screenshot_dark
         "alt" "ExifCleaner on macOS"
         "class" "cross-platform__frame cross-platform__frame--mac") }}
     </div>

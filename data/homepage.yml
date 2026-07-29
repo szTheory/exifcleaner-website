@@ -5,6 +5,7 @@ hero:
   download_url: "https://github.com/szTheory/exifcleaner/releases"
   github_repo: "szTheory/exifcleaner"
   screenshot: "/images/screenshots/light-processed.png"
+  screenshot_dark: "/images/screenshots/dark-processed.png"
 
 # How it works
 steps:
@@ -23,20 +24,25 @@ features:
   - title: "Batch Processing"
     description: "Process tens, hundreds, or even thousands of files at once. ExifCleaner handles them all without breaking a sweat."
     screenshot: "/images/screenshots/light-processed.png"
+    screenshot_dark: "/images/screenshots/dark-processed.png"
     alt: "ExifCleaner processing multiple files simultaneously"
   - title: "Dark Mode"
     description: "Automatically matches your operating system theme. Light or dark, ExifCleaner looks right at home."
-    screenshot: "/images/screenshots/dark-processed.png"
+    screenshot: "/images/screenshots/light-processed.png"
+    screenshot_dark: "/images/screenshots/dark-processed.png"
     alt: "ExifCleaner in dark mode"
-    # Gives this card dark window chrome instead of the default light titlebar.
-    theme: "dark"
+    # Pinned: this card exists to show the app's dark mode, so it stays dark even on the
+    # light site. Every other frame follows the visitor's theme.
+    appearance: "dark"
   - title: "Metadata Inspection"
     description: "See exactly what was stripped. Expand any file to view a before-and-after diff of removed metadata fields."
     screenshot: "/images/screenshots/metadata-diff.png"
+    screenshot_dark: "/images/screenshots/metadata-diff-dark.png"
     alt: "ExifCleaner metadata diff view"
   - title: "Privacy Controls"
     description: "Fine-tune what gets removed. Preserve orientation, save copies, strip extended attributes -- your choice."
     screenshot: "/images/screenshots/settings-open.png"
+    screenshot_dark: "/images/screenshots/settings-open-dark.png"
     alt: "ExifCleaner settings panel with privacy toggles"
 
 # Cross-platform
@@ -45,12 +51,14 @@ cross_platform:
   mac_screenshot: "/images/screenshots/light-processed.png"
   win_screenshot: "/images/screenshots/light-processed.png"
   linux_screenshot: "/images/screenshots/light-processed.png"
+  screenshot_dark: "/images/screenshots/dark-processed.png"
 
 # Language support
 languages:
   title: "Your language, built in."
   subtitle: "24+ languages. No downloads, no plugins."
   screenshot: "/images/screenshots/language-switch.png"
+  screenshot_dark: "/images/screenshots/language-switch-dark.png"
   alt: "ExifCleaner language switching interface"
 
 # Privacy and open source

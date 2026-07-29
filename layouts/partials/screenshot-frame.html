@@ -3,22 +3,35 @@
 
   The screenshots themselves are captured bare (see exifcleaner-electron
   scripts/generate-screenshots.ts) and the chrome is drawn here in HTML/CSS. That keeps it
-  crisp at any width and lets a single macOS screenshot serve the Windows and Linux tabs.
+  crisp at any width and lets a single macOS screenshot serve the Windows and Linux frames.
 
   Params:
-    src      (required) image path
-    alt      (required) alt text
-    theme    "dark" for dark-mode screenshots, so the titlebar matches the app instead of
-             pasting light-grey macOS chrome onto a near-black window. Defaults to light.
-    variant  "win" for the Windows control glyphs. Defaults to macOS traffic lights.
-    loading  "eager" or "lazy" (default "lazy")
-    class    extra classes on the frame element
+    src         (required) light-mode image path
+    srcDark     dark-mode image path; required when appearance is "auto" or "dark"
+    alt         (required) alt text
+    appearance  which app theme the image depicts -- NOT the site theme:
+                  "auto"  (default) follow the site theme
+                  "dark"  always the dark capture, e.g. the Dark Mode feature card
+                  "light" always the light capture
+    variant     "win" for the Windows control glyphs; default is macOS traffic lights
+    loading     "eager" or "lazy" (default "lazy")
+    class       extra classes on the frame element
 
-  Dimensions are the real 1920x1344 of the source PNGs. They were previously declared as
-  1200x800, a different aspect ratio, which made the browser reserve the wrong box and
-  shift the layout as each image loaded.
+  Chrome always matches the app theme *depicted in the image*, never the site theme: a seam
+  between a window and its own titlebar reads as a rendering bug regardless of the page
+  around it. So the only frame that can contradict the site theme is the pinned one, whose
+  entire editorial purpose is to depict the app's dark mode.
+
+  `default` is not optional here. Hugo returns nil for a missing dict key and `eq nil "dark"`
+  is silently false, so a rename typo would quietly drop the dark chrome with no build error.
+
+  Dimensions are the real 1920x1344 of the source PNGs, and every variant must match --
+  they were previously declared as 1200x800, a different aspect ratio, which made the browser
+  reserve the wrong box and shift the layout as each image loaded.
 */}}
-<div class="screenshot-frame{{ with .class }} {{ . }}{{ end }}{{ if eq .theme "dark" }} screenshot-frame--dark{{ end }}">
+{{ $appearance := .appearance | default "auto" }}
+{{ $isDark := eq $appearance "dark" }}
+<div class="screenshot-frame{{ with .class }} {{ . }}{{ end }}{{ if $isDark }} screenshot-frame--dark{{ end }}{{ if eq $appearance "auto" }} screenshot-frame--auto{{ end }}">
   <div class="screenshot-frame__titlebar{{ if eq .variant "win" }} screenshot-frame__titlebar--win{{ end }}">
     {{ if eq .variant "win" }}
     <span class="screenshot-frame__title">ExifCleaner</span>
@@ -39,5 +52,20 @@
     <span class="screenshot-frame__title">ExifCleaner</span>
     {{ end }}
   </div>
-  <img src="{{ .src }}" alt="{{ .alt }}" loading="{{ .loading | default "lazy" }}" width="1920" height="1344">
+  {{ if eq $appearance "auto" }}
+  {{/*
+    <picture> keys off the media query, NOT off [data-theme] -- so an explicit "Light" choice
+    on a dark-OS machine would otherwise still show dark screenshots. main.js rewrites this
+    source's `media` attribute to "all"/"not all" when the choice disagrees with the OS;
+    <picture> re-evaluates on that mutation. Costs one wasted fetch on the eager hero for the
+    minority whose choice contradicts their OS, versus ~1MB for everyone if we shipped two
+    <img> tags and swapped with CSS.
+  */}}
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="{{ .srcDark }}" data-theme-src-dark>
+    <img src="{{ .src }}" alt="{{ .alt }}" loading="{{ .loading | default "lazy" }}" width="1920" height="1344">
+  </picture>
+  {{ else }}
+  <img src="{{ if $isDark }}{{ .srcDark }}{{ else }}{{ .src }}{{ end }}" alt="{{ .alt }}" loading="{{ .loading | default "lazy" }}" width="1920" height="1344">
+  {{ end }}
 </div>
