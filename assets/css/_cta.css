@@ -67,7 +67,7 @@
 .final-cta__headline {
 	font-size: var(--font-heading);
 	font-weight: var(--weight-semibold);
-	color: #fff;
+	color: var(--color-inverse-text);
 	margin-bottom: var(--space-lg);
 }
 

@@ -1,14 +1,51 @@
+/*
+ * Light palette. Also the fallback for browsers without light-dark(): they never enter the
+ * @supports block at the bottom of this file and render exactly this.
+ */
 :root {
 	--color-accent: #0D9488;
 	--color-accent-hover: #0F766E;
 	--color-accent-light: #CCFBF1;
+	/*
+	 * Accent as a *fill* is a darker teal than accent as *text*. White on #0D9488 is 3.74:1,
+	 * which fails WCAG AA for the 18px regular button label; on #0F766E it is 5.47:1.
+	 */
+	--color-accent-fill: #0F766E;
+	--color-accent-fill-hover: #115E59;
+	--color-on-accent: #FFFFFF;
 	--color-text-primary: #0F172A;
 	--color-text-secondary: #64748B;
-	--color-text-tertiary: #94A3B8;
+	/* Was #94A3B8 — 2.56:1 on white, below AA for any size. */
+	--color-text-tertiary: #7A8798;
 	--color-bg-primary: #FFFFFF;
 	--color-bg-secondary: #F8FAFB;
+	--color-surface-elevated: #FFFFFF;
 	--color-border: #E2E8F0;
-	--color-cta-dark: #0F172A;
+
+	/*
+	 * "The opposite of the page", for the final-CTA band. Deliberately NOT derived from
+	 * --color-bg-* : a token meaning "inverse" must not be built from a token meaning
+	 * "the page", or it collapses to invisible the moment the page itself goes dark.
+	 * (Formerly --color-cta-dark, which named its appearance instead of its role.)
+	 */
+	--color-inverse-surface: #0F172A;
+	--color-inverse-text: #FFFFFF;
+	--color-inverse-accent: #0D9488;
+	/*
+	 * The inverted CTA button. Its hover deliberately does NOT reuse --color-bg-secondary:
+	 * that token goes near-black in dark mode, which would make the button disappear on
+	 * hover — on the single most important call to action on the page.
+	 */
+	--color-inverse-btn: #FFFFFF;
+	--color-inverse-btn-hover: #F8FAFB;
+	--color-on-inverse-btn: #0F766E;
+
+	--color-focus-ring: #0D9488;
+
+	/* light-dark() takes a <color> only, so the shadow is composed at the use site. */
+	--shadow-frame: rgba(0, 0, 0, 0.15);
+	--shadow-ring: rgba(0, 0, 0, 0.05);
+	--glow-hero: transparent;
 
 	--space-xs: 4px;
 	--space-sm: 8px;

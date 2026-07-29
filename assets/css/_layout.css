@@ -24,7 +24,13 @@
 	background-color: var(--color-bg-secondary);
 }
 
+/*
+ * The final-CTA band. Both values come from the inverse family, never from --color-bg-*:
+ * deriving "the opposite of the page" from "the page" collapses to invisible the moment
+ * the page goes dark. In dark mode this band sits *lighter* than the page — inverting the
+ * inversion — so it keeps its role as a distinct terminal zone.
+ */
 .section--dark {
-	background-color: var(--color-cta-dark);
-	color: var(--color-bg-primary);
+	background-color: var(--color-inverse-surface);
+	color: var(--color-inverse-text);
 }

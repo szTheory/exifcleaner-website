@@ -46,16 +46,16 @@
 }
 
 .nav__link--cta {
-	background: var(--color-accent);
-	color: #fff;
+	background: var(--color-accent-fill);
+	color: var(--color-on-accent);
 	padding: var(--space-sm) var(--space-md);
 	border-radius: var(--radius-sm);
 	transition: background 0.15s ease;
 }
 
 .nav__link--cta:hover {
-	background: var(--color-accent-hover);
-	color: #fff;
+	background: var(--color-accent-fill-hover);
+	color: var(--color-on-accent);
 }
 
 .nav__hamburger {
