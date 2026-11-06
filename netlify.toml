@@ -1,5 +1,12 @@
+[build]
+  # Fetches the pinned, checksum-verified brand assets (brand.pin.json), then builds.
+  command = "npm run build"
+  publish = "public"
+
 [build.environment]
   HUGO_VERSION = "0.159.1"
+  # The fetch script needs global fetch and node:test-era built-ins (Node 20+).
+  NODE_VERSION = "22"
 
 [context.production.environment]
   HUGO_ENV = "production"
