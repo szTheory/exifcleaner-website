@@ -1,0 +1,11 @@
+{
+  "name": "exifcleaner-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "brand:fetch": "node scripts/brand-fetch.mjs",
+    "brand:update": "node scripts/brand-update.mjs",
+    "build": "node scripts/brand-fetch.mjs && hugo",
+    "test": "node --test scripts/brand.test.mjs"
+  }
+}
