@@ -4,6 +4,10 @@ public
 .DS_Store
 .hugo_build.lock
 
+# Pinned brand assets: fetched by scripts/brand-fetch.mjs, never committed
+.brand-cache/
+static/brand/
+
 # Binaries for programs and plugins
 *.exe
 *.exe~
